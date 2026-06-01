@@ -14,7 +14,8 @@
       // Bug: this shows the user's local time, not necessarily San Francisco time
       const now = new Date();
       document.getElementById("time").innerText =
-        "Local time: " + now.toLocaleTimeString();
+        "San Francisco time: " +
+        now.toLocaleTimeString([], { timeZone: "America/Los_Angeles" });
     }
 
     async function getWeather() {
